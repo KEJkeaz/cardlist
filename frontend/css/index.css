@@ -1,15 +1,11 @@
-/* common start */
+
 *,*:focus,*:hover{
   outline:none;
 }
-html{
-  font-size: 16px;
-  height: 100%;
-}
+
 body{
   height: 100%;
 }
-/* common end */
 
 .board{
   margin-top: 2.5rem;
