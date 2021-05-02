@@ -1,0 +1,83 @@
+/* common start */
+*,*:focus,*:hover{
+  outline:none;
+}
+html{
+  font-size: 16px;
+  height: 100%;
+}
+body{
+  height: 100%;
+}
+/* common end */
+
+.board{
+  margin-top: 2.5rem;
+  height: 100%;
+}
+
+.list-wrapper{
+  display: flex;
+  height: 100%;
+}
+
+.list-wrapper .list{
+  height: 100%;
+  min-width: 12.5rem;
+  margin-right: 1rem;
+}
+
+.list-wrapper .list:last-child{
+  margin-right: unset;
+}
+.list-wrapper .list .card{
+  border-radius: 0.2rem;
+  padding: 0.5rem;
+  background-color: #ddd;
+  margin-bottom: 0.5rem;
+}
+
+.list-wrapper .list .card .card-header{
+  display: grid;
+  margin-bottom: 0.5rem;
+}
+.list-wrapper .list .card .card-header .card-header-title{
+  font-weight: bold;
+  background-color: transparent;
+  border: 1px solid transparent;
+
+}
+.list-wrapper .list .card .card-header .card-header-title:active,
+.list-wrapper .list .card .card-header .card-header-title:focus {
+  background-color: #ffffff;
+  border: 1px solid #dddddd;
+}
+
+.list-wrapper .list .card .card-contents{
+  background-color: #ffffff;
+  border-radius: 0.2rem;
+  padding: 0.5rem;
+}
+.list-wrapper .list .card .card-contents{
+  background-color: #ffffff;
+  border-radius: 0.2rem;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.list-wrapper .list .card .btn-container{
+
+}
+
+.list-wrapper .list .card .btn-container .texarea-wrap {
+  display: grid;
+  margin-bottom: 0.5rem;
+}
+.list-wrapper .list .card .btn-container .add-card-textarea{
+  border: unset;
+
+}
+.list-wrapper .list .card .btn{
+  border: unset;
+  border-radius: 0.2rem;
+  background-color: #b5b5b5;
+}
