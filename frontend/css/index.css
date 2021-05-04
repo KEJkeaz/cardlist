@@ -60,9 +60,32 @@ body{
   padding: 0.5rem;
   margin-bottom: 0.5rem;
 }
-.list-wrapper .list .card .btn-container{
 
+
+.list-wrapper .list .card .card-header,
+.list-wrapper .list .card .card-list {
+  display: block;
 }
+.list-wrapper .list .card .card-add-container .btn-list-add{
+  display: none;
+}
+
+
+.list-wrapper .list.hidden .card .card-header,
+.list-wrapper .list.hidden .card .card-list,
+.list-wrapper .list.hidden .card .card-add-container .btn-card-add,
+.list-wrapper .list.hidden .card .card-add-container .cancel {
+  display: none;
+}
+.list-wrapper .list.hidden .card .card-add-container .btn-list-add{
+  display: block;
+}
+
+/*.list-wrapper .list.hidden .card .card-add-container .btn-list-add*/
+
+
+
+
 
 .list-wrapper .list .card .btn-container .texarea-wrap {
   display: grid;

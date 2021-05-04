@@ -15,7 +15,57 @@
 <div class="board" >
 
   <div class="list-wrapper" id="lists" >
+
+    <div class="list">
+      <div class="card">
+        <div class="card-header">
+          <input type="text" value="title" class="card-header-title">
+        </div>
+
+        <div class="card-list">
+        </div>
+
+        <div class="btn-container">
+          <div class="texarea-wrap">
+            <textarea class=" add-card-textarea">textarea</textarea>
+          </div>
+          <div class="btn-wrap">
+            <button class="btn btn-card-add">add card</button>
+            <button class="btn ">cancel</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="list hidden" id="list10">
+      <div class="card">
+        <div class="card-header">
+          <input type="text" value="title" class="card-header-title">
+        </div>
+
+        <div class="card-list">
+        </div>
+
+
+        <div class="card-add-container" >
+          <button class="btn btn-list-add" onclick="show_add_container('list10')">add a list</button>
+          <button class="btn btn-card-add">add a card</button>
+          <button class="btn cancel" onclick="hidden_add_container('list10')">cancel</button>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="list">
+      <div class="card">
+        <button class="btn btn-card-add">add a list</button>
+      </div>
+    </div>
+
   </div>
+
+
 </div>
 
 
