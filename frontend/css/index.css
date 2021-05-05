@@ -71,13 +71,24 @@ body{
 }
 
 
-.list-wrapper .list.hidden .card .card-header,
-.list-wrapper .list.hidden .card .card-list,
-.list-wrapper .list.hidden .card .card-add-container .btn-card-add,
-.list-wrapper .list.hidden .card .card-add-container .cancel {
+.list-wrapper .list.hidden-add-list .card .card-header,
+.list-wrapper .list.hidden-add-list .card .card-list,
+.list-wrapper .list.hidden-add-list .card .card-add-container .btn-card-add,
+.list-wrapper .list.hidden-add-list .card .card-add-container .cancel {
   display: none;
 }
-.list-wrapper .list.hidden .card .card-add-container .btn-list-add{
+.list-wrapper .list.hidden-add-list .card .card-add-container .btn-list-add{
+  display: block;
+}
+
+
+
+.list-wrapper .list.hidden-add-card .card .btn-container .textarea-wrap * ,
+.list-wrapper .list.hidden-add-card .card .btn-container .btn-wrap * {
+  display: none;
+}
+.list-wrapper .list .card .btn-container .textarea-wrap * ,
+.list-wrapper .list .card .btn-container .btn-wrap * {
   display: block;
 }
 
@@ -87,7 +98,7 @@ body{
 
 
 
-.list-wrapper .list .card .btn-container .texarea-wrap {
+.list-wrapper .list .card .btn-container .textarea-wrap {
   display: grid;
   margin-bottom: 0.5rem;
 }
