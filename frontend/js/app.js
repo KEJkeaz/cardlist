@@ -28,7 +28,7 @@ window.onload = () => {
 }
 
 function draw_card(list_key, card_key, value){
-
+  // list card draw
 
   return document.querySelector('#card-list' + list_key).insertAdjacentHTML( 'afterbegin',
     `<div class="card-contents" id="card` + list_key +`-` + card_key +`" draggable="true" ondrag="drag_card(` + list_key +`,` + card_key +`)">` + value.title +`</div>`
@@ -37,7 +37,7 @@ function draw_card(list_key, card_key, value){
 }
 
 function draw_list(key, value){
-  console.log('value', value)
+  // list html draw
 
   return document.querySelector('#lists').insertAdjacentHTML( 'afterbegin',
 
@@ -70,6 +70,7 @@ function draw_list(key, value){
 
 
 function draw_elements(){
+  // 화면 list, card draw
   for( let list_key in lists){
 
     draw_list(list_key, lists[list_key])
@@ -82,34 +83,27 @@ function draw_elements(){
   }
 }
 function drag_list(){
-  console.log('drag_list')
+  //list drag 이벤트 처리
   this.addEventListener('dragover', function(e) {
-    console.log('this.event', e)
-
     let target = e.target;
-    console.log(target)
     let droppable  = target.classList.contains('list');
-
-    console.log(droppable)
 
   });
 
 }
 function add_card(id) {
   // 카드 데이터 추가
-  console.log(id)
-  console.log(lists[id].cards)
   let title_con = {title: 'test111'}
+
   lists[id].cards.push(title_con)
 
-  console.log('lists11', lists)
 }
 
 function show_add_card(id){
   // 카드 추가 영역 보여지게 처리
   let container= document.getElementById('list'+id);
+
   container.classList.remove("hidden-add-card");
-  console.log('show_add_card', id)
 
   // draw_add_card(id)
 }
@@ -117,9 +111,8 @@ function show_add_card(id){
 function hidden_add_card(id){
   // 카드 추가 영역 보이지 않게 처리
   let container= document.getElementById('list'+id);
-  container.classList.add("hidden-add-card");
 
-  console.log('hidden_add_card', id)
+  container.classList.add("hidden-add-card");
 
 }
 
@@ -127,21 +120,16 @@ function hidden_add_card(id){
 
 function show_add_list(id){
   // 리스트 추가 영역 보여지게 처리
-
   let container= document.getElementById(id);
+
   container.classList.remove("hidden-add-list");
-
   container.querySelector('.card-header-title').focus();
-
-  console.log('clicked')
 }
 
 function hidden_add_list(id){
   // 리스트 추가 영역 보이지않게 처리
   let container= document.getElementById(id);
   container.classList.add("hidden-add-list");
-  console.log(333)
-
 }
 
 function add_list(id){
@@ -151,8 +139,6 @@ function add_list(id){
 
   let title_val = 'test'
 
-  console.log(val)
-  console.log('click add_list')
   let list_form = {
     title: title_val,
     cards:[
@@ -161,26 +147,15 @@ function add_list(id){
   }
   lists.push(list_form)
 
-  console.log('add_list lists', lists)
-
   hidden_add_list(id)
-  // draw_elements()
-
 
 }
 
 function drag_card(list_key, card_key){
   // 카드 드래그 이벤트
-  console.log('list_key', list_key)
-  console.log('list_key', card_key)
-  console.log('drag drag_card')
   this.addEventListener('dragover', function(e) {
-    console.log('this.event', e)
-
     let target = e.target;
-    console.log(target)
     let droppable  = target.classList.contains('card-list');
 
-    console.log(droppable)
   });
 }
